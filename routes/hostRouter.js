@@ -43,7 +43,7 @@ hostRouter
     res.end("PUT operation not supported on /hosts");
   })
   .delete((req, res, next) => {
-    Hosts.remove({})
+    Hosts.deleteMany({})
       .then(
         (resp) => {
           res.statusCode = 200;

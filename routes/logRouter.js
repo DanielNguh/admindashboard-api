@@ -43,7 +43,7 @@ logRouter
     res.end("PUT operation not supported on /logs");
   })
   .delete((req, res, next) => {
-    Logs.remove({})
+    Logs.deleteMany({})
       .then(
         (resp) => {
           res.statusCode = 200;
