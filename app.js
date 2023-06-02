@@ -8,7 +8,7 @@ var config = require('./config');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-const mongoose = require('morgan');
+const mongoose = require('mongoose');
 
 const url = config.mongoUrl;
 const connect = mongoose.connect(url);
@@ -23,7 +23,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(logger('dev'));
+app.use(logger('common'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
