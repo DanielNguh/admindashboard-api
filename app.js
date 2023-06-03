@@ -12,6 +12,7 @@ var logRouter = require('./routes/logRouter');
 var podRouter = require('./routes/podRouter');
 var containerRouter = require('./routes/containerRouter');
 var resourceRouter = require('./routes/resourceRouter');
+const whatsappRouter = require('./routes/whatsappRouter');
 
 const mongoose = require('mongoose');
 
@@ -42,6 +43,7 @@ app.use('/logs', logRouter);
 app.use('/pods', podRouter);
 app.use('/containers', containerRouter);
 app.use('/resources', resourceRouter);
+app.use('/whatsapp', whatsappRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
