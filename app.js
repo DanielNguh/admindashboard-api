@@ -11,6 +11,7 @@ var hostRouter = require('./routes/hostRouter');
 var logRouter = require('./routes/logRouter');
 var podRouter = require('./routes/podRouter');
 var containerRouter = require('./routes/containerRouter');
+var resourceRouter = require('./routes/resourceRouter');
 
 const mongoose = require('mongoose');
 
@@ -40,6 +41,7 @@ app.use('/hosts', hostRouter);
 app.use('/logs', logRouter);
 app.use('/pods', podRouter);
 app.use('/containers', containerRouter);
+app.use('/resources', resourceRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
