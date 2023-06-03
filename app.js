@@ -9,6 +9,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var hostRouter = require('./routes/hostRouter');
 var logRouter = require('./routes/logRouter');
+var podRouter = require('./routes/podRouter');
+var containerRouter = require('./routes/containerRouter');
 
 const mongoose = require('mongoose');
 
@@ -36,6 +38,9 @@ app.use('/users', usersRouter);
 
 app.use('/hosts', hostRouter);
 app.use('/logs', logRouter);
+app.use('/pods', podRouter);
+app.use('/containers', containerRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

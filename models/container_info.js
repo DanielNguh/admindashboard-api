@@ -22,5 +22,5 @@ const containerSchema = new Schema({
     timestamps: true
 })
 
-var Containers = mongoose.model('Containers', podSchema);
+var Containers = mongoose.model('Containers', containerSchema);
 module.exports = Containers;
