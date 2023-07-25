@@ -10,7 +10,7 @@ const containerSchema = new Schema({
     },
     status: {
         type: String,
-        enum: ['running','exited','restarting'],
+        enum: ['running','exited','restarting','paused'],
         required: true
     },
     containerId: {

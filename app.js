@@ -36,14 +36,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api/users', usersRouter);
 
-app.use('/hosts', hostRouter);
-app.use('/logs', logRouter);
-app.use('/pods', podRouter);
-app.use('/containers', containerRouter);
-app.use('/resources', resourceRouter);
-app.use('/whatsapp', whatsappRouter);
+app.use('/api/hosts', hostRouter);
+app.use('/api/logs', logRouter);
+app.use('/api/pods', podRouter);
+app.use('/api/containers', containerRouter);
+app.use('/api/resources', resourceRouter);
+app.use('/api/whatsapp', whatsappRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
